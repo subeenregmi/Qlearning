@@ -1,7 +1,10 @@
-def printer(name):
-    print(f"subeen is {name}")
-    for i in range (1, 10 ):
-        print("subeen")
+import gym
 
+env = gym.make("MountainCar-v0")
+env.reset()
 
-printer("suben")
+done = False
+while not done:
+    action = 2  # always go right!
+    env.step(action)
+    env.render()
